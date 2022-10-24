@@ -99,6 +99,8 @@ class FCMClient(PushService):
         logging.info(body)
 
         access_token, expires_in = self.oauth_client.get_access_token()
+        logging.info(access_token)
+        logging.info(self.endpoint)
         logging.info(
             "access token expiring in %s..." % datetime.timedelta(seconds=expires_in)
         )
